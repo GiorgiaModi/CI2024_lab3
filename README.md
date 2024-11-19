@@ -33,7 +33,7 @@ A* is a popular **informed search algorithm** that uses both the current cost (g
 A* Search garantees the optimal solution with the least number of moves, but it's more memory-intensive due to storing all explored states and their f-scores.
 
 ### Algorithm 2: Depth-First Search with Bound (Iterative Deepening DFS)
-Depth-First Search (DFS) explores the search space by going as deep as possible down one path before backtracking. The algorithm with a bound places a limit on the depth of the search to prevent it from going infinitely deep.
+Depth-First Search (DFS) is an uninformed search algorithm that explores the search space by going as deep as possible down one path before backtracking. The algorithm with a bound places a limit on the depth of the search to prevent it from going infinitely deep.
 
 **Iterative Deepening DFS** is an enhancement of DFS that gradually increases the depth limit, performing DFS for each depth limit starting from 0 until a solution is found or the maximum depth is reached.
 
