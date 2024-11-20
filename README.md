@@ -44,3 +44,18 @@ Depth-First Search (DFS) is an uninformed search algorithm that explores the sea
 4. Continue until the goal state is reached or the maximum depth is reached.
 
 Depth-First Search with Bound is more memory-efficient but can take longer to find a solution compared to A*.
+
+## Results
+Execution time increases significantly as the size of the puzzle increases. For sizes larger than 3x3, the execution time is highly variable. For example for 4x4, the time can range from 1-2 minutes to up to 30 minutes, while for 5x5, it can take more than two hours. In general, the results are very dependent on the initial step, so the results shown in this table are only indicative.
+
+For DFS with bounds, it can happen that no solution is found within the given depth limit, so the depth limit should be increased accordingly.
+
+| Method | Size  | Time        | Initial Step                            | Final Step                              | Notes                                   |
+|--------|-------|-------------|-----------------------------------------|-----------------------------------------|-----------------------------------------|
+| A*     | 2x2   | 0.01s       | `[[3 1] [2 0]]`                        | `[[1 2] [3 0]]`                        | -                                       |
+|        | 3x3   | 0.01s       | `[[2 6 4] [5 7 3] [0 1 8]]`            | `[[1 2 3] [4 5 6] [7 8 0]]`            | -                                       |
+|        | 4x4   | 1m 38.6s    | `[[13 14 7 6] [3 0 1 8] [2 12 9 15] [11 10 4 5]]` | `[[1 2 3 4] [5 6 7 8] [9 10 11 12] [13 14 15 0]]` | -                                       |
+| DFS    | 2x2   | 0.01s       | `[[3 1] [2 0]]`                        | `[[1 2] [3 0]]`                        | Depth: 4                                |
+|        | 3x3   | 0.01s       | `[[2 6 4] [5 7 3] [0 1 8]]`            | `[[1 2 3] [4 5 6] [7 8 0]]`            | Depth: 18                               |
+|        | 4x4   | 4.1s        | `[[13 14 7 6] [3 0 1 8] [2 12 9 15] [11 10 4 5]]` | -                                       | No solution found (limit: 20)           |
+
