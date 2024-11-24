@@ -48,7 +48,7 @@ Depth-First Search with Bound is more memory-efficient but can take longer to fi
 ## Results
 Execution time increases significantly as the size of the puzzle increases. For sizes larger than 3x3, the execution time is highly variable. For example for 4x4, the time can range from 1-2 minutes to up to 30 minutes, while for 5x5, it can take more than two hours. 
 
-Execution time significantly depends on the number of RANDOMIZED_STEPS used to generate the initial configuration. For 5x5 puzzles and larger, reducing RANDOMIZED_STEPS to 100 yields a solution in a reasonable amount of time. However, increasing RANDOMIZED_STEPS results in a dramatic increase in execution time, making larger puzzles infeasible. Additionally, for DFS, increasing the `max_depth` to 25 has been tested to better handle the complexity of these puzzles. 
+Execution time significantly depends on the number of RANDOMIZED_STEPS used to generate the initial configuration. For 5x5 puzzles and larger, reducing RANDOMIZED_STEPS to 100 yields a solution in a reasonable amount of time. However,  even adding just a small amount to RANDOMIZED_STEPS results in a dramatic increase in execution time, making larger puzzles infeasible. Additionally, for DFS, increasing the `max_depth` to 25 has been tested to better handle the complexity of these puzzles. 
 
 A new heuristic function, **linear conflict**, was also implemented but did not improve performance compared to the Manhattan distance heuristic.
 
